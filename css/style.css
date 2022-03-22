@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+header{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../images/desktop/image-hero.jpg)
+     no-repeat center/cover;
+     height: 70rem;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 3%;
+    position: relative;
+}
+nav.mobile i{
+    position: absolute;
+    right: 60px;
+    top: 29px;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    color: #fff;
+}
+nav.mobile ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    padding-top: 100px;
+    height: 680px;
+    text-align: center;
+    list-style: none;
+    display: none;
+}
+nav.mobile ul li{
+    margin-top: 5.5rem;
+
+}
+nav.mobile ul li a{
+    color: #fff;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Alata';
+    padding: 25px;
+}
+nav.desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.desktop ul{
+    display: inline-flex;
+    list-style: none;
+}
+nav.desktop ul li{
+    margin-right: 15px;
+}
+nav.desktop ul li a{
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: 'Alata';
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+
+}
+nav.desktop ul li a::after{
+    content: '';
+    position: absolute;
+    top: 2.8rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: 0.5s;
+}
+nav.desktop ul li a:hover::after{
+    width: 50%;
+}
+header .header-text{
+    margin-top: 120px;
+    max-width: 750px;
+    width: 100%;
+    height: 400px;
+    padding: 2.9rem 3%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    line-height: 100px;
+}
+header .header-text h1{
+    color: #fff;
+    font-weight: 300;
+    font-size: 8.5rem;
+}
+.section1-img img{
+    max-width: 100%;
+}
+.section1{
+    margin-top: 20rem ;
+    position: relative;
+}
+.section1-textbox{
+    max-width: 60rem;
+    background-color: white;
+    padding: 5rem;
+    position: absolute;
+    transform: translate(90%, -85%);
+}
+.section1-textbox h1{
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+.section1-textbox p{
+    font-size: 2rem;
+    color: dimgray;
+}
+section.creation{
+    margin-top: 120px;
+}
+
+.creation-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.creation-text h1{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3.5rem;
+}
+button.btn{
+    border: 2px solid #333;
+    padding: 15px 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+button.btn:hover{
+    color: #fff;
+    background-color: #333;
+}
+.box-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px
+}
+.box-grid .box-img{
+    position: relative;
+    cursor: pointer;
+}
+.box-img img{
+    max-width: 100%;
+
+}
+.box-img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color:#fff;
+}
+.box-img:hover::after{
+    opacity: 0.5;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 140px;
+    margin-top: 120px;
+
+}
+.footer-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.icons i{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .section1 .container{
+        text-align: center;
+        
+    }
+    .section1-textbox{
+        position: relative;
+        left: 50%;
+        transform:translateX(-50%);
+        text-align: center;
+    }
+    .box-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px
+    }
+}
+
+@media (max-width: 810px) {
+    header .header-text h1{
+        font-size: 7.8rem;
+    }
+}
+
+
+@media (max-width: 700px) {
+    nav.desktop ul{
+        display: none;
+    }
+    nav.mobile i{
+        display: block;
+        right: 20px;
+    }
+    header .header-text h1{
+        font-size: 7.3rem;
+        line-height: 80px;
+        margin: 50px 0;
+    }
+    button.btn{
+        padding: 10px 40px;
+    }
+}
+@media (max-width: 680px) {
+    header .header-text h1{
+        font-size: 5rem;
+        line-height: 80px;
+        margin: 50px 0;
+    }
+}
